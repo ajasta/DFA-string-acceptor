@@ -29,8 +29,8 @@ vector<vector<string>> input_matrix(int n){
     return moves;
 }
 
-int accept(vector<char> chars, string query, int n, vector<vector<string>> moves){
-    int i, j, state=0;
+int accept(vector<char> chars, string query, vector<vector<string>> moves){
+    int i, j, start=0;
     for(i=0;i<query.end();i++){
         for(j=0;j<n;j++){
             if(query[i]==moves[start][j]){
@@ -39,6 +39,14 @@ int accept(vector<char> chars, string query, int n, vector<vector<string>> moves
             }
         }
     }
+}
+
+int main(){
+	vector<char> symbols; int size;
+	symbols = input();
+	size = symbols.size();
+
+	accept(symbols, test_string, matrix)
 }
 
 
